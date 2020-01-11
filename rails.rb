@@ -23,7 +23,7 @@ puts nil, "Question 1:", nil
 
 #refactored
 
-def hello_world lang = 'en'
+def hello_world lang = 'en' #set default
   valid_codes = {
     "en" => "Hello, world!",
     "es" => "Hola, mundo!",
@@ -31,7 +31,7 @@ def hello_world lang = 'en'
     "ru" => "Privet, mir!",
     "ja" => "Kon'nichiwa sekai!"
   }
-  valid_codes[lang.downcase] || "Hello, wherever you are!"
+  valid_codes[lang.downcase] || "Hello, wherever you are!" #for un-accounted-for language codes, sends general response
 end
 
 puts hello_world      #"Hello, world!"
